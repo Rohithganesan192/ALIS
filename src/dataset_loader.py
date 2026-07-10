@@ -50,7 +50,7 @@ def load_dataset():
         ) from error
     
     if dataset.empty:
-        raise ValueError("Dataset is empty.")
+        raise ValueError("The assembly shop dataset is empty.")
 
         # Check whether the DataFrame contains any records.
         # A CSV with only column headers is considered empty.
