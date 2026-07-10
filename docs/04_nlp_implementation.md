@@ -150,3 +150,42 @@ Implement the retrieval engine responsible for identifying the most relevant kno
 ### Output
 
 A reusable retrieval module capable of selecting the most relevant knowledge record from the ALIS dataset based on semantic similarity while preventing weak matches through threshold validation.
+
+---
+
+## Task 4.6 – Response Handler
+
+### Objective
+
+Implement the Response Handler responsible for formatting the retrieved knowledge record into a clear and user-friendly response before displaying it to the user.
+
+### Design Rationale
+
+The Retrieval Engine is responsible only for identifying the most relevant record. Presenting that record directly would expose unnecessary internal information and reduce readability. Therefore, a dedicated Response Handler module is introduced to separate retrieval logic from presentation logic.
+
+This separation improves modularity, maintainability, and future extensibility by allowing response formatting to evolve independently of retrieval functionality.
+
+### Activities Performed
+
+- Created the `response_handler.py` module.
+- Implemented response generation for successful retrievals.
+- Implemented fallback response generation when no suitable match is found.
+- Extracted relevant fields from the retrieved record.
+- Formatted the final response into a user-friendly structure.
+
+### Validation Performed
+
+The module verifies that:
+
+- A valid record is correctly formatted.
+- Missing records generate a fallback response.
+- The similarity score is displayed consistently.
+- Internal dataset fields not intended for users are not exposed.
+
+### Output
+
+The Response Handler produces a clean textual response containing the record identifier, category, answer, and similarity score, or a fallback message when no suitable answer exists.
+
+### Result
+
+A dedicated presentation component has been successfully implemented. The module separates retrieval logic from response formatting, improving the modular design of the ALIS chatbot.
