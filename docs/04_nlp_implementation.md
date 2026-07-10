@@ -189,3 +189,38 @@ The Response Handler produces a clean textual response containing the record ide
 ### Result
 
 A dedicated presentation component has been successfully implemented. The module separates retrieval logic from response formatting, improving the modular design of the ALIS chatbot.
+
+---
+
+## Task 4.7 – Command Line Interface
+
+### Objective
+
+Implement a terminal-based Command Line Interface (CLI) that enables users to interact with the ALIS chatbot by entering questions and receiving formatted responses.
+
+### Design Rationale
+
+The CLI provides a lightweight user interface suitable for the project's initial implementation. Separating user interaction from the NLP pipeline improves modularity and allows future replacement of the interface with a graphical or web-based interface without modifying the underlying processing modules.
+
+### Activities Performed
+
+- Created the `cli_interface.py` module.
+- Implemented user input functionality.
+- Implemented formatted response display.
+- Separated presentation logic from application logic.
+
+### Validation Performed
+
+- Verified that user input is successfully captured.
+- Verified that chatbot responses are displayed in a readable format.
+- Confirmed that no NLP processing logic is embedded within the CLI module.
+
+### Output
+
+A reusable command-line interface capable of accepting user questions and displaying chatbot responses.
+
+### Result
+
+A dedicated CLI module has been successfully implemented, providing the user interaction layer for the ALIS chatbot while maintaining separation between presentation and processing logic.
+
+---
